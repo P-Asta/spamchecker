@@ -1,7 +1,7 @@
 use csv::ReaderBuilder;
 use linfa::prelude::Predict;
 use linfa::{traits::Fit, DatasetBase};
-use linfa_bayes::GaussianNb;
+use linfa_bayes::{GaussianNb, GaussianNbParams};
 use ndarray::{Array1, Array2};
 use std::io::BufRead;
 
@@ -26,7 +26,7 @@ fn main() {
 
     let train = DatasetBase::new(x, y);
 
-    let model = GaussianNb::params().fit(&train).unwrap();
+    let model: GaussianNb<_, _> = GaussianNb::params().fit(&train).unwrap();
 
     //let input = std::io::stdin().lock().lines().next().unwrap().unwrap();
     //let input = "🔞 Best Free Onlyfans leaks, Teen content, porn, sexcam and daily leaks here: discord.gg/teen-sex ❤️ @here @everyone 💖WITH NEW CONTENT 💖 JOIN NOW❤️"
