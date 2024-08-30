@@ -1,0 +1,12 @@
+[package]
+name = "sus"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+csv = "1.3.0"
+linfa = "0.7.0"
+linfa-bayes = "0.7.0"
+linfa-datasets = { version = "0.7.0", features = ["diabetes", "generate", "winequality"] }
+ndarray = { version = "0.15", features = ["approx"] }
+serde = { version = "1.0.209", features = ["derive"] }
